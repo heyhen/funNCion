@@ -1,1 +1,2 @@
+featuretablepretty* filter=lfs diff=lfs merge=lfs -text
 featuretable4* filter=lfs diff=lfs merge=lfs -text
