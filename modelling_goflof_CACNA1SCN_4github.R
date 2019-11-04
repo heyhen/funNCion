@@ -18,7 +18,7 @@ setwd("/Users/henrikeheyne/Humangenetik/Single_Gene/CACNA1_fam/")
 
 # read files ####
 featuretable <- fread("featuretable4github_revision.txt")
-varall <- fread("SupplementaryTable_S1_pathvariantsusedintraining_revision.txt")
+varall <- fread("SupplementaryTable_S1_pathvariantsusedintraining_revision2.txt")
 prettynames <- fread("pretty_featurenames2.txt")
 famcacscn <- as.data.frame(fread("scncacaa_familyalignedCACNA1Acantranscript.txt"))
 
@@ -31,13 +31,8 @@ source("/Users/henrikeheyne/Humangenetik/scripts/CACNA1SCN_extra/R_functions4pre
 
 varall <- varall[used_in_functional_prediction%in%1]
 varall <- varall[prd_mech_revised%in%c("lof", "gof")]
-
 # remove duplicate sites:
 varall <- varall[!duplicated(varall[,c("gene", "altAA", "pos")])]
-
-# doublcheck
-table(varall[,c("prd_mech_revised", "pathogenic_infer")])
-t(table(varall[,c("prd_mech_revised", "gene")]))
 
 # ...feature table 
 
