@@ -15,13 +15,13 @@ library(doParallel)
 library("mltools")
 
 # read files ####
-featuretable <- fread("manuscript/submission_science_transl_medicine/SupplTables/featuretable4github_revision.txt")
-varall <- fread("manuscript/submission_science_transl_medicine/SupplTables/SupplementaryTable_S1_pathvariantsusedintraining_revision.txt")
-prettynames <- fread("protein_domains/pretty_featurenames2.txt")
-gnomadnoneur2 <- fread("manuscript/submission_science_transl_medicine/SupplTables/S2_neutralvariantsusedintraining3.txt")
+featuretable <- fread("featuretable4github_revision.txt")
+varall <- fread("SupplementaryTable_S1_pathvariantsusedintraining_revision.txt")
+prettynames <- fread("pretty_featurenames2.txt")
+gnomadnoneur2 <- fread("SupplTables/S2_neutralvariantsusedintraining3.txt")
 
 # read functions ####
-source("/Users/henrikeheyne/Humangenetik/scripts/CACNA1SCN_extra/R_functions4predicting_path_GOFLOF_CACNA1SCN.r")
+source("R_functions4predicting_path_GOFLOF_CACNA1SCN.r")
 
 # format tables ####
 
