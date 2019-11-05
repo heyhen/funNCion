@@ -14,8 +14,6 @@ library(caret)
 library(doParallel)
 library("mltools")
 
-setwd("/Users/henrikeheyne/Humangenetik/Single_Gene/CACNA1_fam/")
-
 # read files ####
 featuretable <- fread("featuretable4github_revision.txt")
 varall <- fread("SupplementaryTable_S1_pathvariantsusedintraining_revision2.txt")
@@ -23,7 +21,7 @@ prettynames <- fread("pretty_featurenames2.txt")
 famcacscn <- as.data.frame(fread("scncacaa_familyalignedCACNA1Acantranscript.txt"))
 
 # read functions ####
-source("/Users/henrikeheyne/Humangenetik/scripts/CACNA1SCN_extra/R_functions4predicting_goflof_CACNA1SCN.R")
+source("R_functions4predicting_goflof_CACNA1SCN.R")
 
 # format tables ####
 
